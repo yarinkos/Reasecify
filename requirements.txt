@@ -1,0 +1,9 @@
+# Only needed for kb_graph/finetune/ (the workflow's Generate-training-data /
+# Fine-tune / Chat-with-fine-tuned-model steps) — the rest of kb_graph is
+# stdlib-only. Install with:
+#   pip install -r kb_graph/requirements.txt
+torch
+transformers
+peft
+accelerate
+huggingface_hub

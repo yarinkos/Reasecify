@@ -1,0 +1,41 @@
+# --- Secrets ---
+# Real credentials (ANTHROPIC_AUTH_TOKEN, GITHUB_PAT, etc.) belong in a local
+# .env, never in code or committed history. Every shape of that file, at any
+# depth, is ignored — including if one ever gets created inside a workspace
+# directory pointed here.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*.json
+
+# --- Generated pipeline output ---
+# ingest.py/query.py write here, and the workflow wizard's per-workspace
+# output (clones, graph.json, generated training data, fine-tune adapters,
+# logs, the runs manifest) lives under <workspace>/output/ too — this single
+# rule covers all of it, at any depth, without needing a separate rule per
+# artifact type.
+output/
+
+# Deliberately NOT ignoring a bare `finetune/` pattern here: that would also
+# match this repo's actual `finetune/` *source package* (dataset_gen.py,
+# train.py, etc.), not just generated artifacts — which already live under
+# `output/finetune/` and are covered by the rule above.
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Editor / OS cruft ---
+.idea/
+.vscode/
+.DS_Store
+*.log
