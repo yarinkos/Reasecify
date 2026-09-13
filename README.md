@@ -1,15 +1,27 @@
-# Reasecify
+# Reasecify: The Context-Aware DevSec Companion
 
-Reasecify combines a few different methods into one streamlined process
-for exploring and understanding an organization's infrastructure and
-security setup — giving a real, domain-specific understanding of why each
-piece is built the way it is, not just what it is.
+Reasecify bridges the gap between static code and security intent. By
+combining Graph-Based Infrastructure Ingestion, Dynamic Knowledge Base
+(Wiki) Linking, and Domain-Specific LoRA Fine-Tuning, Reasecify creates a
+dedicated AI companion that internalizes your organization's unique
+architecture and security decisions.
 
-It weaves discovery, a wiki+graph knowledge base, and fine-tuning into a
-single pipeline that builds a dedicated model — one that can answer real
-questions about your organization's own security and infrastructure
-decisions, grounded in its actual facts rather than generic best
-practices.
+- **Infrastructure Knowledge Graph** — Parses IaC (Terraform) to map
+  dependencies, cross-repo references, and resource connections into a
+  unified typed graph.
+
+- **Unified Knowledge Base (Wiki)** — Ingests Confluence design docs
+  alongside code, linking architecture decisions directly to live
+  infrastructure nodes without siloed context.
+
+- **Fine-Tuned Domain Intelligence** — Generates synthetic training
+  datasets straight from your architecture graph to LoRA fine-tune local
+  open-weight models (Llama 3), turning your team's design rationale into
+  model weights.
+
+- **Dual-Engine Chat** — Features grounded retrieval-augmented generation
+  (RAG) for instant, context-verified queries, alongside fine-tuned local
+  model inference for native architecture recall.
 
 
 ## The workflow, end to end
