@@ -1,10 +1,52 @@
 # Reasecify: The Context-Aware DevSec Companion
 
-Reasecify bridges the gap between static code and security intent. By
-combining Graph-Based Infrastructure Ingestion, Dynamic Knowledge Base
-(Wiki) Linking, and Domain-Specific LoRA Fine-Tuning, Reasecify creates a
-dedicated AI companion that internalizes your organization's unique
-architecture and security decisions.
+Reasecify (Reasoning + Security + Graph) connects all of an organization's
+available data — infrastructure-as-code, design docs, and the decisions
+behind them — into one place. By combining Graph-Based Infrastructure
+Ingestion, Dynamic Knowledge Base (Wiki) Linking, and Domain-Specific LoRA
+Fine-Tuning, Reasecify creates a dedicated AI companion that internalizes
+your organization's unique architecture and security decisions.
+
+```
+┌───────────────────────────┐
+│         Discover          │
+└───────────────────────────┘
+             │
+             ▼
+┌───────────────────────────┐
+│           Clone           │
+└───────────────────────────┘
+             │
+             ▼
+┌───────────────────────────┐
+│          Ingest           │
+└───────────────────────────┘
+             │
+             ▼
+┌───────────────────────────┐
+│  Knowledge Graph + Wiki   │
+└───────────────────────────┘
+             │
+             ▼
+┌───────────────────────────┐
+│  Chat (Claude, grounded)  │
+└───────────────────────────┘
+             │
+             ▼
+┌───────────────────────────┐
+│  Generate training data   │
+└───────────────────────────┘
+             │
+             ▼
+┌───────────────────────────┐
+│     Fine-tune (LoRA)      │
+└───────────────────────────┘
+             │
+             ▼
+┌───────────────────────────┐
+│  Chat (fine-tuned model)  │
+└───────────────────────────┘
+```
 
 - **Infrastructure Knowledge Graph** — Parses IaC (Terraform) to map
   dependencies, cross-repo references, and resource connections into a
@@ -23,6 +65,23 @@ architecture and security decisions.
   (RAG) for instant, context-verified queries, alongside fine-tuned local
   model inference for native architecture recall.
 
+## How does it help me?
+
+Each backbone on its own falls short:
+
+- **A plain RAG setup** retrieves out of context in many cases — a single
+  pass over unstructured text misses the relationships that live in the
+  *structure* of the infrastructure itself, not just its words.
+- **A plain wiki-LLM setup** doesn't scale — it needs all the relevant data
+  handed to it fresh for every single question, with nothing carried over
+  or connected between them.
+- **Fine-tuning alone on raw data** can mislead — a model trained straight
+  on undigested text can pick up noise and stale detail as if it were fact.
+
+Reasecify combines all three backbones into one streamlined process, so you
+get the best of each: real answers grounded in your organization's own
+facts, a working understanding of your security architecture, and a head
+start on finding and fixing the next issue.
 
 ## The workflow, end to end
 
