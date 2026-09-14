@@ -83,6 +83,8 @@ get the best of each: real answers grounded in your organization's own
 facts, a working understanding of your security architecture, and a head
 start on finding and fixing the next issue.
 
+![Fine-tune step and chat with the fine-tuned model](screenshots/fine-tune-and-chat.png)
+
 ## The workflow, end to end
 
 Reasecify is a guided, one-page pipeline (`workflow/server.py`) that walks
